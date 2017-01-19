@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django_test1.views import index
+from django_test1.views import ip
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/', index),
+    url(r'^ip/', ip),
 ]

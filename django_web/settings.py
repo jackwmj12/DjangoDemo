@@ -25,7 +25,7 @@ SECRET_KEY = 'u8w#&3n!$f41y@)j1(d22!v6-3^uez2s5!#$g)zo#=56y71b$2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,3 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS =(os.path.join(BASE_DIR,"static"),)
+from mongoengine import connect
+# connect('blog', host='localhost', username='root', password='1234')
+connect('金属价格', host='192.168.1.104',port=27017)
